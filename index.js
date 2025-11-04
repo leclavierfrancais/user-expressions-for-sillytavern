@@ -24,7 +24,7 @@ const defaultSettings = {
   // File Paths
   basePath: "UserExpressions",  // Relative to SillyTavern/public/
   useRepository: false,
-  repositoryUrl: "https://raw.githubusercontent.com/yourusername/expressions/main/",
+  repositoryUrl: "https://github.com/leclavierfrancais/user-expressions-for-sillytavern",
   
   // Expression Definitions
   expressions: {
