@@ -1,16 +1,11 @@
 {
-    "name": "user-expressions",
     "display_name": "User Expressions",
-    "description": "Adds dynamic character expressions for the user, similar to AI characters",
-    "version": "1.0.0",
-    "author": "Your Name",
-    "homePage": "https://github.com/yourusername/user-expressions",
+    "loading_order": 9,
     "requires": [],
     "optional": [],
     "js": "index.js",
     "css": "style.css",
-    "settings": true,
-    "loading_order": 9,
-    "tags": ["ui", "characters", "expressions"],
-    "icon": "fa-smile"
+    "author": "Your Name",
+    "version": "1.0.0",
+    "homePage": "https://github.com/leclavierfrancais/user-expressions-for-sillytavern"
 }
