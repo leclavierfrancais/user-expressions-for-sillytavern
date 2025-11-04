@@ -1,0 +1,98 @@
+<!-- You might want to add additional HTML elements to ST. 
+    It's good practice to separate it out from your code -->
+<div class="example-extension-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Extension Example</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <div class="example-extension_block flex-container">
+                <input id="my_button" class="menu_button" type="submit" value="Example Button" />
+            </div>
+
+            <div class="example-extension_block flex-container">
+                <input id="example_setting" type="checkbox" />
+                <label for="example_setting">This is an example</label>
+            </div>
+
+            <hr class="sysHR" />
+            <div class="inline-drawer">
+                <div class="inline-drawer-toggle inline-drawer-header">
+                    <b>User Expressions</b>
+                    <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+                </div>
+                <div class="inline-drawer-content">
+                    <div class="flex-container">
+                        <input id="userexp_translate" type="checkbox" />
+                        <label for="userexp_translate">Translate text to English before classification</label>
+                    </div>
+                    <div class="flex-container">
+                        <input id="userexp_multi" type="checkbox" />
+                        <label for="userexp_multi">Allow multiple sprites per expression</label>
+                    </div>
+                    <div class="flex-container">
+                        <input id="userexp_reroll" type="checkbox" />
+                        <label for="userexp_reroll">Re-roll if same sprite is used again</label>
+                    </div>
+                    <div class="flex-container">
+                        <label for="userexp_classifier" style="min-width: 200px;">Classifier API</label>
+                        <select id="userexp_classifier" class="text_pole">
+                            <option value="none">[ None ]</option>
+                        </select>
+                    </div>
+                    <div class="flex-container">
+                        <label for="userexp_fallback" style="min-width: 200px;">Default / Fallback Expression</label>
+                        <select id="userexp_fallback" class="text_pole"></select>
+                    </div>
+                    <div class="flex-container" style="gap: 8px; align-items: center; flex-wrap: wrap;">
+                        <label style="min-width: 200px;">Custom Expressions</label>
+                        <input id="userexp_new_label" class="text_pole" placeholder="expression label" style="width: 180px;" />
+                        <input id="userexp_new_url" class="text_pole" placeholder="image URL" style="width: 260px;" />
+                        <input id="userexp_add_image" class="menu_button" type="submit" value="+" />
+                    </div>
+                    <div class="flex-container" style="margin-top: 6px;">
+                        <ul id="userexp_images_list" style="list-style: none; padding-left: 0; width: 100%;"></ul>
+                    </div>
+                    <div class="flex-container" style="gap: 8px; align-items: center; margin-top: 6px;">
+                        <label for="userexp_sprite_override" style="min-width: 200px;">Sprite Folder Override</label>
+                        <input id="userexp_sprite_override" class="text_pole" placeholder="Override folder name" />
+                        <input id="userexp_submit_override" class="menu_button" type="submit" value="Submit" />
+                    </div>
+                    <hr class="sysHR" />
+                    <div class="flex-container" style="flex-direction: column; gap: 8px; margin-top: 8px;">
+                        <h4>Repository Settings</h4>
+                        <div class="flex-container" style="align-items: center;">
+                            <input type="checkbox" id="userexp_use_repository" />
+                            <label for="userexp_use_repository" style="min-width: 200px;">Use Remote Repository</label>
+                        </div>
+                        <div class="flex-container" style="flex-direction: column; gap: 4px;">
+                            <label for="userexp_repository_url">Repository URL</label>
+                            <input type="text" id="userexp_repository_url" class="text_pole" style="width: 100%;" 
+                                   placeholder="https://raw.githubusercontent.com/username/repo/main/" />
+                            <small>Must end with a forward slash (/)</small>
+                        </div>
+                        <div class="flex-container" style="flex-direction: column; gap: 4px; margin-top: 8px;">
+                            <label for="userexp_local_path">OR Local Path (relative to public/)</label>
+                            <input type="text" id="userexp_local_path" class="text_pole" style="width: 100%;" 
+                                   placeholder="UserExpressions/" />
+                        </div>
+                    </div>
+                    <hr class="sysHR" />
+                    <div class="flex-container" style="margin-top: 8px;">
+                        <div id="userexp_preview_wrap" style="display:flex; flex-direction: column; gap:8px; width: 100%;">
+                            <h4>Current Expression</h4>
+                            <div style="display:flex; align-items: center; gap: 16px;">
+                                <img id="userexp_preview" src="" alt="" style="max-height: 120px; display: none; border: 1px solid var(--SmartThemeQuoteColor); border-radius: 4px;" />
+                                <div>
+                                    <div>Label: <span id="userexp_preview_label">-</span></div>
+                                    <div>Source: <span id="userexp_preview_source">-</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
